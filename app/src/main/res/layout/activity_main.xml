@@ -68,15 +68,16 @@
 
         <ImageButton
             android:id="@+id/btnListado"
-            android:layout_width="124dp"
-            android:layout_height="124dp"
+            android:layout_width="123dp"
+            android:layout_height="121dp"
             android:layout_marginTop="64dp"
-            android:layout_marginEnd="48dp"
             android:backgroundTint="#F0F0F0"
             android:scaleType="fitStart"
             android:tint="#3A5E43"
             app:layout_constraintBottom_toTopOf="@+id/btnMapa"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.749"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.296"
             app:srcCompat="@drawable/baseline_list_alt_24" />

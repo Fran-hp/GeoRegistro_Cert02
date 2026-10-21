@@ -6,34 +6,52 @@
     android:layout_height="match_parent"
     android:background="#4F7D59">
 
-    <FrameLayout
-        android:id="@+id/frameLayout"
-        android:layout_width="411dp"
-        android:layout_height="743dp"
-        android:background="#FFFFFF"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="148dp">
-
-        <ListView
-            android:id="@+id/lsIncidencias"
-            style="@style/Widget.AppCompat.Light.ListView.DropDown"
-            android:layout_width="match_parent"
-            android:layout_height="752dp" />
-    </FrameLayout>
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-black"
-        android:text="Historial de incidencias"
-        android:textAlignment="textStart"
-        android:textColor="#F1EDB0"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toTopOf="@+id/frameLayout"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.301"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.64" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="sans-serif-black"
+            android:text="Historial de incidencias"
+            android:textAlignment="textStart"
+            android:textColor="#F1EDB0"
+            android:textSize="34sp" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF">
+
+            <TextView
+                android:id="@+id/tvVacio"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Aún no hay incidencias registradas"
+                android:textAlignment="textStart"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <ProgressBar
+                android:id="@+id/progressCarga"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="79dp"
+                android:layout_height="82dp"
+                android:layout_gravity="center" />
+
+            <ListView
+                android:id="@+id/lvIncidencias"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </FrameLayout>
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
